@@ -9,8 +9,8 @@ export default function SignInPage() {
     const [password, setPassword] =  useState('');
 
     function signIn() {
-        axios.post("http://localhost:8000/user/signin/", // POST 방식으로 http://localhost:8000/user/signin/에게 Request
-            {'id': userId, 'password': password}) // POST 방식 내부 데이터
+        axios.post("http://localhost:8000/patient/signin/", // POST 방식으로 http://localhost:8000/user/signin/에게 Request
+            {'patient_name': userId, 'patient_password': password}) // POST 방식 내부 데이터
         .then(function() { // Response가 성공일 때 function 실행
             alert("성공했습니다!")
         })

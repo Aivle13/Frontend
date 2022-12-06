@@ -11,8 +11,8 @@ export default function SignUpPage({history}) {
     const navigate = useNavigate(); // useNavigate: 화면을 변경하고 싶을 때 사용
 
     function signup() {
-        axios.post("http://localhost:8000/user/signup/", // POST 방식으로 http://localhost:8000/user/signup/에게 Request
-            {"id": userId, "password": password} // POST 방식 내부 데이터
+        axios.post("http://localhost:8000/patient/signup/", // POST 방식으로 http://localhost:8000/user/signup/에게 Request
+            {"patient_name": userId, "patient_password": password} // POST 방식 내부 데이터
         )
         .then(function(response) { // Response가 성공일 때 function 실행
             alert("회원가입 성공!")
